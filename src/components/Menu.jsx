@@ -33,6 +33,13 @@ function TiltCard({ children, style }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const cardRef = useRef(null);
 
+  // Listen for resize events
+  useRef(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }).current = true;
+
   const handleMove = (e) => {
     if (isMobile) return; // Disable tilt on mobile
     const rect = e.currentTarget.getBoundingClientRect();
@@ -49,10 +56,9 @@ function TiltCard({ children, style }) {
       style={{
         ...style,
         transform: !isMobile && (tilt.x !== 0 || tilt.y !== 0) 
-          ? `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`
+          ? `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`
           : 'none',
         transition: tilt.x === 0 && tilt.y === 0 ? 'transform 0.5s ease' : 'transform 0.1s linear',
-        willChange: 'transform',
       }}
     >
       {children}
@@ -138,29 +144,31 @@ export default function Menu() {
         >
           {filtered.map(item => (
             <motion.div key={item.id} variants={itemVariants}>
-              <TiltCard style={{ height: '100%' }}>
+              <TiltCard style={{ height: '100%', width: '100%' }}>
                 <div
                   style={{
-                    background: 'rgba(255,255,255,0.02)',
+                    background: '#0f0a07',
                     border: '1px solid rgba(201,169,110,0.1)',
                     overflow: 'hidden',
                     height: '100%',
+                    width: '100%',
+                    boxSizing: 'border-box',
                     display: 'flex',
                     flexDirection: 'column',
                     transition: 'border-color 0.3s, box-shadow 0.4s',
                   }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(201,169,110,0.35)'; e.currentTarget.style.boxShadow = '0 24px 64px rgba(0,0,0,0.5)'; }}
+                  onMouseEnter={e => { if (!window.matchMedia('(max-width: 768px)').matches) { e.currentTarget.style.borderColor = 'rgba(201,169,110,0.35)'; e.currentTarget.style.boxShadow = '0 24px 64px rgba(0,0,0,0.5)'; } }}
                   onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(201,169,110,0.1)'; e.currentTarget.style.boxShadow = 'none'; }}
                 >
                   {/* Image */}
-                  <div style={{ position: 'relative', overflow: 'hidden', aspectRatio: '1 / 0.8', flex: '0 0 auto' }}>
+                  <div style={{ position: 'relative', overflow: 'hidden', width: '100%', height: 'auto', minHeight: '200px', aspectRatio: '1 / 0.8', flex: '0 0 auto', backgroundColor: '#1a1410' }}>
                     <img
                       src={item.image}
                       alt={item.name}
                       loading="lazy"
-                      style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.6s ease' }}
-                      onMouseEnter={e => e.target.style.transform = 'scale(1.07)'}
-                      onMouseLeave={e => e.target.style.transform = 'scale(1)'}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', backgroundColor: '#2a2420' }}
+                      onMouseEnter={e => !window.matchMedia('(max-width: 768px)').matches && (e.target.style.transform = 'scale(1.07)')}
+                      onMouseLeave={e => !window.matchMedia('(max-width: 768px)').matches && (e.target.style.transform = 'scale(1)')}
                     />
                     <div style={{
                       position: 'absolute', inset: 0,
