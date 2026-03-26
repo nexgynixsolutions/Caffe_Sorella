@@ -30,9 +30,11 @@ const MENU_ITEMS = [
 // Tilt on hover
 function TiltCard({ children, style }) {
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const cardRef = useRef(null);
 
   const handleMove = (e) => {
+    if (isMobile) return; // Disable tilt on mobile
     const rect = e.currentTarget.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width - 0.5;
     const y = (e.clientY - rect.top) / rect.height - 0.5;
@@ -46,8 +48,11 @@ function TiltCard({ children, style }) {
       onMouseLeave={() => setTilt({ x: 0, y: 0 })}
       style={{
         ...style,
-        transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
-        transition: tilt.x === 0 ? 'transform 0.5s ease' : 'transform 0.1s linear',
+        transform: !isMobile && (tilt.x !== 0 || tilt.y !== 0) 
+          ? `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`
+          : 'none',
+        transition: tilt.x === 0 && tilt.y === 0 ? 'transform 0.5s ease' : 'transform 0.1s linear',
+        willChange: 'transform',
       }}
     >
       {children}
@@ -140,18 +145,20 @@ export default function Menu() {
                     border: '1px solid rgba(201,169,110,0.1)',
                     overflow: 'hidden',
                     height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
                     transition: 'border-color 0.3s, box-shadow 0.4s',
                   }}
                   onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(201,169,110,0.35)'; e.currentTarget.style.boxShadow = '0 24px 64px rgba(0,0,0,0.5)'; }}
                   onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(201,169,110,0.1)'; e.currentTarget.style.boxShadow = 'none'; }}
                 >
                   {/* Image */}
-                  <div style={{ position: 'relative', overflow: 'hidden', aspectRatio: '1 / 0.8' }}>
+                  <div style={{ position: 'relative', overflow: 'hidden', aspectRatio: '1 / 0.8', flex: '0 0 auto' }}>
                     <img
                       src={item.image}
                       alt={item.name}
                       loading="lazy"
-                      style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s ease' }}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.6s ease' }}
                       onMouseEnter={e => e.target.style.transform = 'scale(1.07)'}
                       onMouseLeave={e => e.target.style.transform = 'scale(1)'}
                     />
@@ -172,7 +179,7 @@ export default function Menu() {
                   </div>
 
                   {/* Content */}
-                  <div style={{ padding: 'clamp(16px, 4vw, 32px) clamp(16px, 4vw, 28px)' }}>
+                  <div style={{ padding: 'clamp(16px, 4vw, 32px) clamp(16px, 4vw, 28px)', flex: '1 1 auto', display: 'flex', flexDirection: 'column' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8, marginBottom: 12, flexWrap: 'wrap' }}>
                       <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 'clamp(18px, 4vw, 22px)', fontWeight: 500, color: '#f5ead8', lineHeight: 1.2 }}>
                         {item.name}
