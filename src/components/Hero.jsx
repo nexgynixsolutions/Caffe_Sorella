@@ -117,8 +117,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.9 }}
           style={{
             fontFamily: "'Jost', sans-serif",
-            fontSize: 'clamp(14px, 2vw, 17px)', fontWeight: 300,
-            color: 'rgba(232,213,183,0.7)', maxWidth: 480,
+            fontSize: 'clamp(14px, 2vw, 17px)', fontWeight: 400,
+            color: 'rgba(232,213,183,0.92)', maxWidth: 480,
             margin: '0 auto 48px', lineHeight: 1.7, letterSpacing: '0.04em',
           }}
         >
@@ -178,7 +178,7 @@ export default function Hero() {
           zIndex: 3, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10,
         }}
       >
-        <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', letterSpacing: '0.3em', color: 'rgba(201,169,110,0.6)', textTransform: 'uppercase' }}>Scroll</span>
+        <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', letterSpacing: '0.3em', color: 'rgba(201,169,110,0.85)', textTransform: 'uppercase' }}>Scroll</span>
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}

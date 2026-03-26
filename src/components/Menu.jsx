@@ -118,7 +118,7 @@ export default function Menu() {
                 fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase',
                 padding: '8px 20px', border: 'none', cursor: 'none',
                 background: activeCategory === cat ? '#c9a96e' : 'transparent',
-                color: activeCategory === cat ? '#0f0a07' : 'rgba(201,169,110,0.6)',
+                color: activeCategory === cat ? '#0f0a07' : 'rgba(201,169,110,0.85)',
                 borderBottom: activeCategory !== cat ? '1px solid rgba(201,169,110,0.2)' : 'none',
                 transition: 'all 0.3s',
               }}
@@ -196,12 +196,12 @@ export default function Menu() {
                         {item.price}
                       </span>
                     </div>
-                    <p style={{ fontFamily: "'Jost', sans-serif", fontSize: 'clamp(12px, 3vw, 13px)', fontWeight: 400, color: 'rgba(232,213,183,0.72)', lineHeight: 1.7, letterSpacing: '0.02em' }}>
+                    <p style={{ fontFamily: "'Jost', sans-serif", fontSize: 'clamp(12px, 3vw, 13px)', fontWeight: 500, color: 'rgba(232,213,183,0.93)', lineHeight: 1.7, letterSpacing: '0.02em' }}>
                       {item.desc}
                     </p>
                     <div style={{ marginTop: 20, display: 'flex', alignItems: 'center', gap: 8 }}>
                       <span style={{ width: 20, height: 1, background: '#c9a96e' }} />
-                      <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', letterSpacing: '0.2em', color: 'rgba(201,169,110,0.5)', textTransform: 'uppercase' }}>
+                      <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', letterSpacing: '0.2em', color: 'rgba(201,169,110,0.85)', textTransform: 'uppercase' }}>
                         {item.category}
                       </span>
                     </div>

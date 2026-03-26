@@ -99,8 +99,8 @@ export default function About() {
               animate={rightIn ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.3 + i * 0.1 }}
               style={{
-                fontFamily: "'Jost', sans-serif", fontSize: '15px', fontWeight: 400,
-                color: 'rgba(232,213,183,0.72)', lineHeight: 1.85, letterSpacing: '0.02em',
+                fontFamily: "'Jost', sans-serif", fontSize: '15px', fontWeight: 500,
+                color: 'rgba(232,213,183,0.93)', lineHeight: 1.85, letterSpacing: '0.02em',
                 marginBottom: i < 2 ? 20 : 40,
               }}
             >
@@ -149,7 +149,7 @@ export default function About() {
             <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 'clamp(40px,4vw,56px)', fontWeight: 300, color: '#c9a96e', lineHeight: 1 }}>
               {stat.value}
             </div>
-            <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(232,213,183,0.4)', marginTop: 10 }}>
+            <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(232,213,183,0.65)', marginTop: 10 }}>
               {stat.label}
             </div>
           </motion.div>

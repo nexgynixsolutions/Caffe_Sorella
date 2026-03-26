@@ -47,7 +47,7 @@ export default function Footer() {
               <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '28px', fontWeight: 600, color: '#c9a96e', letterSpacing: '0.08em' }}>CAFFE SORELLA</div>
               <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', fontWeight: 300, color: '#a08060', letterSpacing: '0.3em', marginTop: 2 }}>FOREST HILL, QLD</div>
             </div>
-            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '13px', fontWeight: 400, color: 'rgba(232,213,183,0.72)', lineHeight: 1.8, maxWidth: 240 }}>
+            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '13px', fontWeight: 400, color: 'rgba(232,213,183,0.92)', lineHeight: 1.8, maxWidth: 240 }}>
               42 Victoria St, Forest Hill QLD 4342, Australia<br />
               +61 7 5465 4106
             </p>
@@ -59,7 +59,7 @@ export default function Footer() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.5)', marginBottom: 24 }}>
+            <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.8)', marginBottom: 24 }}>
               Navigate
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
@@ -70,11 +70,11 @@ export default function Footer() {
                   onClick={e => { e.preventDefault(); scrollTo(link.href); }}
                   style={{
                     fontFamily: "'Jost', sans-serif", fontSize: '13px', fontWeight: 400,
-                    color: 'rgba(232,213,183,0.72)', textDecoration: 'none',
+                    color: 'rgba(232,213,183,0.92)', textDecoration: 'none',
                     letterSpacing: '0.04em', transition: 'color 0.3s',
                   }}
                   onMouseEnter={e => e.target.style.color = '#c9a96e'}
-                  onMouseLeave={e => e.target.style.color = 'rgba(232,213,183,0.72)'}
+                  onMouseLeave={e => e.target.style.color = 'rgba(232,213,183,0.92)'}
                 >
                   {link.label}
                 </a>
@@ -88,13 +88,13 @@ export default function Footer() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.5)', marginBottom: 24 }}>
+            <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.8)', marginBottom: 24 }}>
               Hours
             </div>
             {[['Thursday - Wednesday', '7:00 AM - 3:00 PM']].map(([day, time]) => (
               <div key={day} style={{ display: 'flex', justifyContent: 'space-between', gap: 24, marginBottom: 14 }}>
-                <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', fontWeight: 400, color: 'rgba(232,213,183,0.72)' }}>{day}</span>
-                <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', fontWeight: 300, color: 'rgba(201,169,110,0.55)', whiteSpace: 'nowrap' }}>{time}</span>
+                <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', fontWeight: 400, color: 'rgba(232,213,183,0.92)' }}>{day}</span>
+                <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', fontWeight: 400, color: 'rgba(201,169,110,0.8)', whiteSpace: 'nowrap' }}>{time}</span>
               </div>
             ))}
           </motion.div>
@@ -105,7 +105,7 @@ export default function Footer() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.5)', marginBottom: 24 }}>
+            <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.8)', marginBottom: 24 }}>
               Facebook
             </div>
             <div style={{ display: 'flex', gap: 16, marginBottom: 36 }}>
@@ -114,7 +114,7 @@ export default function Footer() {
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
-                  style={{ color: 'rgba(201,169,110,0.4)', transition: 'color 0.3s', display: 'flex' }}
+                  style={{ color: 'rgba(201,169,110,0.7)', transition: 'color 0.3s', display: 'flex' }}
                   onMouseEnter={e => e.currentTarget.style.color = '#c9a96e'}
                   onMouseLeave={e => e.currentTarget.style.color = 'rgba(201,169,110,0.4)'}
                 >
@@ -129,7 +129,7 @@ export default function Footer() {
               style={{
                 fontFamily: "'Jost', sans-serif",
                 fontSize: '13px',
-                color: 'rgba(232,213,183,0.65)',
+                color: 'rgba(232,213,183,0.9)',
                 textDecoration: 'none',
                 letterSpacing: '0.04em',
               }}
@@ -141,10 +141,10 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div style={{ borderTop: '1px solid rgba(201,169,110,0.08)', paddingTop: 32, display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: 16, alignItems: 'center' }}>
-          <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '11px', fontWeight: 300, color: 'rgba(232,213,183,0.25)', letterSpacing: '0.06em' }}>
+          <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '11px', fontWeight: 400, color: 'rgba(232,213,183,0.55)', letterSpacing: '0.06em' }}>
             © 2026 Caffe Sorella. All rights reserved.
           </span>
-          <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '13px', fontStyle: 'italic', color: 'rgba(201,169,110,0.3)' }}>
+          <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '13px', fontStyle: 'italic', color: 'rgba(201,169,110,0.6)' }}>
             Premium Coffee Experience
           </span>
         </div>

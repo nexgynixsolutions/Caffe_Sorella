@@ -126,7 +126,7 @@ export default function Contact() {
                 <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '32px', fontWeight: 300, color: '#f5ead8', marginBottom: 16 }}>
                   Reservation Received
                 </h3>
-                <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '14px', fontWeight: 400, color: 'rgba(232,213,183,0.72)', lineHeight: 1.7 }}>
+                <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '14px', fontWeight: 500, color: 'rgba(232,213,183,0.93)', lineHeight: 1.7 }}>
                   We'll confirm your booking within 24 hours.<br />We look forward to welcoming you.
                 </p>
               </motion.div>
@@ -176,10 +176,10 @@ export default function Contact() {
                 ◎
               </span>
               <div>
-                <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.5)', marginBottom: 6 }}>
+                <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.8)', marginBottom: 6 }}>
                   Address
                 </div>
-                <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '14px', fontWeight: 300, color: 'rgba(232,213,183,0.75)', lineHeight: 1.5 }}>
+                <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '14px', fontWeight: 400, color: 'rgba(232,213,183,0.93)', lineHeight: 1.5 }}>
                   42 Victoria St, Forest Hill QLD 4342, Australia
                 </div>
               </div>
@@ -195,10 +195,10 @@ export default function Contact() {
                 ◷
               </span>
               <div>
-                <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.5)', marginBottom: 6 }}>
+                <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.8)', marginBottom: 6 }}>
                   Hours
                 </div>
-                <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '14px', fontWeight: 300, color: 'rgba(232,213,183,0.75)', lineHeight: 1.5 }}>
+                <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '14px', fontWeight: 400, color: 'rgba(232,213,183,0.93)', lineHeight: 1.5 }}>
                   Thursday - Wednesday: 7:00 AM - 3:00 PM
                 </div>
               </div>
@@ -214,10 +214,10 @@ export default function Contact() {
                 ◻
               </span>
               <div>
-                <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.5)', marginBottom: 6 }}>
+                <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.8)', marginBottom: 6 }}>
                   Phone
                 </div>
-                <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '14px', fontWeight: 300, color: 'rgba(232,213,183,0.75)', lineHeight: 1.5 }}>
+                <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '14px', fontWeight: 400, color: 'rgba(232,213,183,0.93)', lineHeight: 1.5 }}>
                   +61 7 5465 4106
                 </div>
               </div>
@@ -233,7 +233,7 @@ export default function Contact() {
                 ◇
               </span>
               <div>
-                <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.5)', marginBottom: 6 }}>
+                <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.8)', marginBottom: 6 }}>
                   Facebook
                 </div>
                 <a

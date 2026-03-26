@@ -235,7 +235,7 @@ export default function Testimonials() {
                 transition={{ repeat: Infinity, duration: 1.2, ease: 'linear' }}
                 style={{ width: 36, height: 36, borderRadius: '50%', border: '2px solid rgba(201,169,110,0.2)', borderTopColor: '#c9a96e', margin: '0 auto 24px' }}
               />
-              <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.65)' }}>
+              <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(201,169,110,0.9)' }}>
                 Loading Google Reviews
               </p>
             </div>
@@ -283,7 +283,7 @@ export default function Testimonials() {
                     <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '13px', fontWeight: 400, color: '#f5ead8', letterSpacing: '0.08em' }}>
                       {testimonials?.[current]?.name}
                     </div>
-                    <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '10px', color: 'rgba(201,169,110,0.6)', letterSpacing: '0.15em', textTransform: 'uppercase', marginTop: 4 }}>
+                    <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '10px', color: 'rgba(201,169,110,0.85)', letterSpacing: '0.15em', textTransform: 'uppercase', marginTop: 4 }}>
                       {testimonials?.[current]?.role}
                     </div>
                   </div>

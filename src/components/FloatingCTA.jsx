@@ -1,6 +1,7 @@
 // FloatingCTA.jsx — WhatsApp button + mid-page Book a Table CTA banner
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import shopBg from '../assets/shop.png';
 
 // Floating WhatsApp Button
 export function WhatsAppButton() {
@@ -77,7 +78,7 @@ export function CTABanner() {
   return (
     <section style={{
       position: 'relative', overflow: 'hidden',
-      backgroundImage: `url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1600&q=80&auto=format')`,
+      backgroundImage: `url(${shopBg})`,
       backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed',
       padding: 'clamp(80px,10vw,120px) clamp(24px,6vw,80px)',
       textAlign: 'center',
