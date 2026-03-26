@@ -122,7 +122,7 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            <a
+            {/* <a
               href="https://m.facebook.com/caffesorella/"
               target="_blank"
               rel="noreferrer"
@@ -135,7 +135,7 @@ export default function Footer() {
               }}
             >
               m.facebook.com/caffesorella
-            </a>
+            </a> */}
           </motion.div>
         </div>
 
