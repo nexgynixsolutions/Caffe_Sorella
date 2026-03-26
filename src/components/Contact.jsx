@@ -126,7 +126,7 @@ export default function Contact() {
                 <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '32px', fontWeight: 300, color: '#f5ead8', marginBottom: 16 }}>
                   Reservation Received
                 </h3>
-                <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '14px', fontWeight: 300, color: 'rgba(232,213,183,0.55)', lineHeight: 1.7 }}>
+                <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '14px', fontWeight: 400, color: 'rgba(232,213,183,0.72)', lineHeight: 1.7 }}>
                   We'll confirm your booking within 24 hours.<br />We look forward to welcoming you.
                 </p>
               </motion.div>

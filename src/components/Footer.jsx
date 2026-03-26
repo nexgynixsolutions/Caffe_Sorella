@@ -47,7 +47,7 @@ export default function Footer() {
               <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '28px', fontWeight: 600, color: '#c9a96e', letterSpacing: '0.08em' }}>CAFFE SORELLA</div>
               <div style={{ fontFamily: "'Jost', sans-serif", fontSize: '9px', fontWeight: 300, color: '#a08060', letterSpacing: '0.3em', marginTop: 2 }}>FOREST HILL, QLD</div>
             </div>
-            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '13px', fontWeight: 300, color: 'rgba(232,213,183,0.4)', lineHeight: 1.8, maxWidth: 240 }}>
+            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '13px', fontWeight: 400, color: 'rgba(232,213,183,0.72)', lineHeight: 1.8, maxWidth: 240 }}>
               42 Victoria St, Forest Hill QLD 4342, Australia<br />
               +61 7 5465 4106
             </p>
@@ -69,12 +69,12 @@ export default function Footer() {
                   href={link.href}
                   onClick={e => { e.preventDefault(); scrollTo(link.href); }}
                   style={{
-                    fontFamily: "'Jost', sans-serif", fontSize: '13px', fontWeight: 300,
-                    color: 'rgba(232,213,183,0.45)', textDecoration: 'none',
+                    fontFamily: "'Jost', sans-serif", fontSize: '13px', fontWeight: 400,
+                    color: 'rgba(232,213,183,0.72)', textDecoration: 'none',
                     letterSpacing: '0.04em', transition: 'color 0.3s',
                   }}
                   onMouseEnter={e => e.target.style.color = '#c9a96e'}
-                  onMouseLeave={e => e.target.style.color = 'rgba(232,213,183,0.45)'}
+                  onMouseLeave={e => e.target.style.color = 'rgba(232,213,183,0.72)'}
                 >
                   {link.label}
                 </a>
@@ -93,7 +93,7 @@ export default function Footer() {
             </div>
             {[['Thursday - Wednesday', '7:00 AM - 3:00 PM']].map(([day, time]) => (
               <div key={day} style={{ display: 'flex', justifyContent: 'space-between', gap: 24, marginBottom: 14 }}>
-                <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', fontWeight: 300, color: 'rgba(232,213,183,0.4)' }}>{day}</span>
+                <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', fontWeight: 400, color: 'rgba(232,213,183,0.72)' }}>{day}</span>
                 <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '12px', fontWeight: 300, color: 'rgba(201,169,110,0.55)', whiteSpace: 'nowrap' }}>{time}</span>
               </div>
             ))}

@@ -33,7 +33,7 @@ export default function IntroLoader({ onComplete }) {
               transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
               style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '48px', fontWeight: 600, color: '#c9a96e', letterSpacing: '0.15em' }}
             >
-              LUMIÈRE
+              Caffe Sorella
             </motion.div>
           </div>
           <motion.div
@@ -42,7 +42,7 @@ export default function IntroLoader({ onComplete }) {
             transition={{ duration: 0.8, delay: 0.6 }}
             style={{ fontFamily: "'Jost', sans-serif", fontSize: '10px', fontWeight: 300, color: '#6b4f35', letterSpacing: '0.4em', textTransform: 'uppercase' }}
           >
-            Coffee & Co.
+            Forest Hill
           </motion.div>
 
           {/* Progress line */}

@@ -99,8 +99,8 @@ export default function About() {
               animate={rightIn ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.3 + i * 0.1 }}
               style={{
-                fontFamily: "'Jost', sans-serif", fontSize: '15px', fontWeight: 300,
-                color: 'rgba(232,213,183,0.62)', lineHeight: 1.85, letterSpacing: '0.02em',
+                fontFamily: "'Jost', sans-serif", fontSize: '15px', fontWeight: 400,
+                color: 'rgba(232,213,183,0.72)', lineHeight: 1.85, letterSpacing: '0.02em',
                 marginBottom: i < 2 ? 20 : 40,
               }}
             >

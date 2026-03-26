@@ -196,7 +196,7 @@ export default function Menu() {
                         {item.price}
                       </span>
                     </div>
-                    <p style={{ fontFamily: "'Jost', sans-serif", fontSize: 'clamp(12px, 3vw, 13px)', fontWeight: 300, color: 'rgba(232,213,183,0.55)', lineHeight: 1.7, letterSpacing: '0.02em' }}>
+                    <p style={{ fontFamily: "'Jost', sans-serif", fontSize: 'clamp(12px, 3vw, 13px)', fontWeight: 400, color: 'rgba(232,213,183,0.72)', lineHeight: 1.7, letterSpacing: '0.02em' }}>
                       {item.desc}
                     </p>
                     <div style={{ marginTop: 20, display: 'flex', alignItems: 'center', gap: 8 }}>
