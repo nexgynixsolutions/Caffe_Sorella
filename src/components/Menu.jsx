@@ -125,8 +125,8 @@ export default function Menu() {
           animate={inView ? "visible" : "hidden"}
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
-            gap: 24,
+            gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))',
+            gap: 'clamp(16px, 4vw, 24px)',
           }}
         >
           {filtered.map(item => (
@@ -144,7 +144,7 @@ export default function Menu() {
                   onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(201,169,110,0.1)'; e.currentTarget.style.boxShadow = 'none'; }}
                 >
                   {/* Image */}
-                  <div style={{ position: 'relative', overflow: 'hidden', height: 220 }}>
+                  <div style={{ position: 'relative', overflow: 'hidden', aspectRatio: '1 / 0.8' }}>
                     <img
                       src={item.image}
                       alt={item.name}
@@ -170,16 +170,16 @@ export default function Menu() {
                   </div>
 
                   {/* Content */}
-                  <div style={{ padding: '24px 28px 32px' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
-                      <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '22px', fontWeight: 500, color: '#f5ead8', lineHeight: 1.2 }}>
+                  <div style={{ padding: 'clamp(16px, 4vw, 32px) clamp(16px, 4vw, 28px)' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8, marginBottom: 12, flexWrap: 'wrap' }}>
+                      <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 'clamp(18px, 4vw, 22px)', fontWeight: 500, color: '#f5ead8', lineHeight: 1.2 }}>
                         {item.name}
                       </h3>
-                      <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '20px', color: '#c9a96e', fontStyle: 'italic', whiteSpace: 'nowrap', marginLeft: 12 }}>
+                      <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 'clamp(16px, 4vw, 20px)', color: '#c9a96e', fontStyle: 'italic', whiteSpace: 'nowrap' }}>
                         {item.price}
                       </span>
                     </div>
-                    <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '13px', fontWeight: 300, color: 'rgba(232,213,183,0.55)', lineHeight: 1.7, letterSpacing: '0.02em' }}>
+                    <p style={{ fontFamily: "'Jost', sans-serif", fontSize: 'clamp(12px, 3vw, 13px)', fontWeight: 300, color: 'rgba(232,213,183,0.55)', lineHeight: 1.7, letterSpacing: '0.02em' }}>
                       {item.desc}
                     </p>
                     <div style={{ marginTop: 20, display: 'flex', alignItems: 'center', gap: 8 }}>
