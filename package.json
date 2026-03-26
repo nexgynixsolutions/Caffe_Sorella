@@ -1,6 +1,7 @@
 {
   "name": "lumiere-coffee",
   "version": "1.0.0",
+  "homepage": "https://nexgynixsolutions.github.io/Caffe_Sorella/",
   "private": true,
   "dependencies": {
     "concurrently": "^9.1.2",
