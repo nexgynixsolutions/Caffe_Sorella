@@ -125,8 +125,10 @@ export default function Menu() {
           animate={inView ? "visible" : "hidden"}
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))',
-            gap: 'clamp(16px, 4vw, 24px)',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))',
+            gap: 'clamp(12px, 3vw, 24px)',
+            width: '100%',
+            boxSizing: 'border-box',
           }}
         >
           {filtered.map(item => (
