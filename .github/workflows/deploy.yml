@@ -17,13 +17,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'npm'
 
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps
+      - name: Delete lock file and reinstall
+        run: |
+          rm -f package-lock.json
+          npm install
 
       - name: Build React app
-        run: npx --yes react-scripts build
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
