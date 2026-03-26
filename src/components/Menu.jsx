@@ -68,7 +68,7 @@ function TiltCard({ children, style }) {
 
 export default function Menu() {
   const [activeCategory, setActiveCategory] = useState('All');
-  const [sectionRef, inView] = useScrollAnimation(0.1);
+  const [sectionRef, inView] = useScrollAnimation(0);
 
   const filtered = activeCategory === 'All'
     ? MENU_ITEMS
